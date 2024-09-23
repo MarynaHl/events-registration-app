@@ -1,0 +1,48 @@
+nav {
+  padding: 24px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  box-sizing: border-box;
+  margin: 40px auto;
+  min-width: calc(320px - 32px);
+  max-width: 375px;
+  padding: 16px;
+  border: 2px solid #242424;
+  border-radius: 4px;
+  font-style: 14px;
+}
+h1 {
+  margin-bottom: 20px;
+}
+
+.fill {
+  display: block;
+  width: 260px;
+  margin-bottom: 8px;
+  padding: 8px;
+}
+p {
+  margin: 32px 0 20px 0;
+}
+
+.submitBtn {
+  display: block;
+  margin-top: 32px;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 40px;
+  }
+
+  .fill {
+    width: 360px;
+  }
+  h1 {
+    font-size: 48px;
+  }
+}

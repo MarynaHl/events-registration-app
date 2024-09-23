@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Registration</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/form-style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="/index.html">Home page</a>
+      </nav>
+    </header>
+    <main>
+      <section class="container">
+        <form class="addParticipant">
+          <h1>Event registration</h1>
+          <label>
+            Full name
+            <input class="fill" type="text" name="full_name" required />
+          </label>
+          <label>
+            Email
+            <input class="fill" type="email" name="email" required />
+          </label>
+          <label>
+            Date of birth
+            <input class="fill" type="date" name="date_of_birth" required />
+          </label>
+          <p>Where did you hear about this event?</p>
+          <label>
+            <input
+              type="radio"
+              name="hear_about"
+              value="social_media"
+              checked
+            />
+            Social media
+          </label>
+          <label>
+            <input type="radio" name="hear_about" value="friends" />
+            Friends
+          </label>
+          <label>
+            <input type="radio" name="hear_about" value="found_myself" />
+            Found myself
+          </label>
+          <button class="submitBtn" type="submit">Registration</button>
+        </form>
+      </section>
+    </main>
+
+    <script type="module" src="./js/form.js"></script>
+  </body>
+</html>

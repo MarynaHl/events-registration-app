@@ -1,128 +1,95 @@
-/* General body styling */
-body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    max-width: 1200px;
-    margin: auto;
-}
-
-/* Header */
 h1 {
-    color: #333;
-    text-align: center;
+  font-size: 48px;
 }
 
-/* Grid layout for events */
-.event-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    margin-top: 20px;
+h3,
+h4 {
+  margin-bottom: 16px;
+}
+p {
+  margin-bottom: 12px;
 }
 
-.event {
-    border: 1px solid #ddd;
-    padding: 15px;
-    border-radius: 5px;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+/* Styles for Mobile devices */
+
+.container {
+  min-width: 320px;
+  max-width: 375px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 40px 16px;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
 }
 
-.event h2 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
+.events-list {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 16px 0;
+  margin-bottom: 24px;
 }
 
-.event p {
-    color: #555;
-    margin-bottom: 15px;
+.events-list-item {
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 2px solid #242424;
+  border-radius: 4px;
+  padding: 12px;
 }
 
-.event a {
-    display: inline-block;
-    margin: 5px;
-    padding: 10px;
-    color: #007BFF;
-    text-decoration: none;
-    border: 1px solid #007BFF;
-    border-radius: 5px;
+.links {
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
 }
 
-.event a:hover {
-    background-color: #007BFF;
-    color: white;
+.registerLink,
+.viewLink {
+  cursor: pointer;
 }
 
-/* Pagination styling */
-.pagination {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
+.pagination-list {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+.pagination-item {
+  font-style: 24px;
+  cursor: pointer;
 }
 
-.pagination a {
-    color: #007BFF;
-    text-decoration: none;
-    padding: 10px 15px;
-    border: 1px solid #ddd;
-    margin: 0 5px;
+/* Styles for Tablet devices */
+
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 40px;
+  }
+
+  .events-list {
+    gap: 40px;
+  }
+
+  .events-list-item {
+    width: calc((100% - 40px) / 2);
+  }
 }
 
-.pagination a:hover {
-    background-color: #007BFF;
-    color: white;
-}
+/* Styles for Desktop devices */
 
-/* Registration form styling */
-form {
-    max-width: 400px;
-    margin: 40px auto;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-}
+@media only screen and (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+  }
 
-form input,
-form select,
-form label {
-    display: block;
-    width: 100%;
-    margin-bottom: 15px;
-}
-
-form input,
-form select {
-    padding: 10px;
-    font-size: 16px;
-}
-
-form label {
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-form input[type="radio"] {
-    display: inline-block;
-    width: auto;
-}
-
-form .radio-labels {
-    display: flex;
-    justify-content: space-between;
-}
-
-form button {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-form button:hover {
-    background-color: #0056b3;
+  .events-list {
+    gap: 40px;
+  }
+  .events-list-item {
+    width: calc((100% - 120px) / 4);
+  }
 }
