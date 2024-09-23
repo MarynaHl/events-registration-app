@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Registration</title>
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+    <h1>Event Registration</h1>
+    <form id="registrationForm">
+        <label for="fullName">Full name</label>
+        <input type="text" id="fullName" placeholder="Full Name" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Email" required />
+
+        <label for="dateOfBirth">Date of birth</label>
+        <input type="date" id="dateOfBirth" required />
+
+        <label>Where did you hear about this event?</label>
+        <div class="radio-labels">
+            <label><input type="radio" name="heardFrom" value="socialMedia" required /> Social media</label>
+            <label><input type="radio" name="heardFrom" value="friends" required /> Friends</label>
+            <label><input type="radio" name="heardFrom" value="self" required /> Found myself</label>
+        </div>
+
+        <button type="submit">Register</button>
+    </form>
+
+    <script src="js/register.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,128 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Header */
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+/* Grid layout for events */
+.event-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.event {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.event h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.event p {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.event a {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px;
+    color: #007BFF;
+    text-decoration: none;
+    border: 1px solid #007BFF;
+    border-radius: 5px;
+}
+
+.event a:hover {
+    background-color: #007BFF;
+    color: white;
+}
+
+/* Pagination styling */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.pagination a {
+    color: #007BFF;
+    text-decoration: none;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    margin: 0 5px;
+}
+
+.pagination a:hover {
+    background-color: #007BFF;
+    color: white;
+}
+
+/* Registration form styling */
+form {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+form input,
+form select,
+form label {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+form input,
+form select {
+    padding: 10px;
+    font-size: 16px;
+}
+
+form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+form input[type="radio"] {
+    display: inline-block;
+    width: auto;
+}
+
+form .radio-labels {
+    display: flex;
+    justify-content: space-between;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}

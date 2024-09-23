@@ -4,6 +4,7 @@ const dotenv = require('dotenv');
 const connectDB = require('./config/db');
 const eventRoutes = require('./routes/eventRoutes');
 const { errorHandler } = require('./middleware/errorHandler');
+const path = require('path');
 
 dotenv.config();
 
@@ -23,3 +24,6 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
+// Serve static files from frontend
+app.use(express.static(path.join(__dirname, '../frontend')));
