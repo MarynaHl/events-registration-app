@@ -4,7 +4,7 @@ import cors from 'cors';
 import router from './routers/index.js';
 import { env } from './utils/env.js';
 
-const PORT = process.env.PORT || 3000;
+const PORT = env.PORT || 3000;
 
 export const startServer = () => {
     const app = express();
