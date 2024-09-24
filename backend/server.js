@@ -1,11 +1,10 @@
 import express from 'express';
 import pino from 'pino-http';
 import cors from 'cors';
-
 import router from './routers/index.js';
 import { env } from './utils/env.js';
 
-const PORT = Number(env('PORT', '3000'));
+const PORT = process.env.PORT || 3000;
 
 export const startServer = () => {
     const app = express();
@@ -21,20 +20,26 @@ export const startServer = () => {
         }),
     );
 
+    app.use((req, res, next) => {
+        console.log(`${req.method} ${req.url}`);
+        next();
+    });
+
     app.use(router);
 
-    app.use('*', (req, res, next) => {
+    app.use('*', (req, res) => {
         res.status(404).json({
-            message: 'Non found',
+            message: 'Not found',
         });
     });
 
     app.use((err, req, res, next) => {
-    res.status(500).json({
-      message: 'Something went wrong',
-      error: err.message,
+        console.error('Error:', err); // Логування помилки
+        res.status(500).json({
+            message: 'Something went wrong',
+            error: err.message,
+        });
     });
-  });
 
     app.listen(PORT, () => {
         console.log(`Server is running on port ${PORT}`);
