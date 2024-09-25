@@ -12,20 +12,25 @@ nav {
   padding: 16px;
   font-style: 14px;
 }
+
 h1 {
   margin-bottom: 20px;
 }
+
 .participants-list {
-  display: flex;
-  flex-wrap: wrap;
+  display: flex; /* Keep the flex display for the list */
+  flex-wrap: wrap; /* Allow wrapping */
   gap: 16px;
   padding: 16px 0;
 }
+
 .participants-item {
   border: 2px solid #242424;
   border-radius: 4px;
   padding: 16px;
-  width: 280px;
+  display: inline-block; /* Allow width to adapt to content */
+  width: auto; /* Let it grow with the content */
+  max-width: calc(100% - 16px); /* Optional: to fit within the parent */
 }
 
 @media only screen and (min-width: 768px) {
@@ -39,7 +44,7 @@ h1 {
   }
 
   .participants-item {
-    width: calc((100% - 16px) / 2);
+    width: auto; /* Remove fixed width to adapt to content */
   }
 }
 
@@ -49,6 +54,6 @@ h1 {
   }
 
   .participants-item {
-    width: calc((100% - 16px * 3) / 4);
+    width: auto; /* Remove fixed width to adapt to content */
   }
 }
