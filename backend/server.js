@@ -4,7 +4,7 @@ import cors from 'cors';
 import router from './routers/index.js';
 import { env } from './utils/env.js';
 
-const PORT = env.PORT || 3000;
+const PORT = env('PORT') || 5000;
 
 export const startServer = () => {
     const app = express();
@@ -41,6 +41,7 @@ export const startServer = () => {
         });
     });
 
+    console.log('Server will start on port:', PORT); // Лог порту перед стартом
     app.listen(PORT, () => {
         console.log(`Server is running on port ${PORT}`);
     });
