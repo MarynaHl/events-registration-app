@@ -10,7 +10,7 @@ markUpEvents(page);
 
 async function getEvents(page) {
     try {
-        const response = await fetch(`https://eventsregistrationbackend.onrender.com/?page=${page}`);
+        const response = await fetch(`https://event-registration-app-bjos.onrender.com/?page=${page}`);
         const data = await response.json();
 
         return data.data;

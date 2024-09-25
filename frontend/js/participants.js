@@ -4,7 +4,7 @@ const event_id = new URLSearchParams(window.location.search).get('event_id');
 
 async function getParticipants() {
     try {
-        const response = await fetch(`https://eventsregistrationbackend.onrender.com/${event_id}/participants`);
+        const response = await fetch(`https://event-registration-app-bjos.onrender.com/${event_id}/participants`);
         const data = await response.json();
 
         if (data.data.length === 0) {

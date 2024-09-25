@@ -11,7 +11,7 @@ function addParticipant(participant) {
         body: JSON.stringify(participant),
     }
    
-    return fetch(`https://eventsregistrationbackend.onrender.com/${event_id}`, options)
+    return fetch(`https://event-registration-app-bjos.onrender.com/${event_id}`, options)
             .then((res) => res.json())
             .catch((err) => console.log(err));
 }
