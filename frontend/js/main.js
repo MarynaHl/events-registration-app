@@ -19,6 +19,17 @@ async function getEvents(page) {
     }
 };
 
+document.addEventListener('DOMContentLoaded', () => {
+    // Simulate content loading delay with setTimeout
+    setTimeout(() => {
+      // Hide the loading message
+      document.getElementById('loading-message').style.display = 'none';
+  
+      // Show the content
+      document.getElementById('content').style.display = 'block';
+    }, 2000); // Change this to your actual content load time
+  });
+
 function markUpEvents(page) {
     getEvents(page)
         .then((res) => {

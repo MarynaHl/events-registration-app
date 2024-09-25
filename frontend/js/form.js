@@ -27,8 +27,14 @@ function handleSubmit(event) {
     const hear_about = form.hear_about.value;
 
     addParticipant({ full_name, email, date_of_birth, hear_about })
-        .then((res) => alert('Your registration was successful!'))
-        .catch((err) => console.log(err));
+        .then((res) => {
+            alert('Your registration was successful!');
+            window.location.href = '/index.html';
+        })
+        .catch((err) => {
+            console.log(err);
+            alert('Registration failed. Please try again.');
+        });
 
     event.target.reset();
 }
