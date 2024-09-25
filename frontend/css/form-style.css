@@ -1,21 +1,17 @@
-nav {
-  padding: 24px 0;
-  display: flex;
-  justify-content: center;
-}
-
 .container {
   box-sizing: border-box;
   margin: 40px auto;
   min-width: calc(320px - 32px);
   max-width: 375px;
   padding: 16px;
-  border: 2px solid #242424;
-  border-radius: 4px;
+  border: 1px solid #a9a9a9; /* Thinner gray border */
+  border-radius: 8px; /* Rounded corners */
   font-style: 14px;
 }
+
 h1 {
   margin-bottom: 20px;
+  text-align: center; /* Centered the header */
 }
 
 .fill {
@@ -23,9 +19,9 @@ h1 {
   width: 260px;
   margin-bottom: 8px;
   padding: 8px;
-}
-p {
-  margin: 32px 0 20px 0;
+  border: 1px solid #a9a9a9; /* Thinner gray border */
+  border-radius: 8px; /* Rounded corners */
+  background-color: #f0f0f0; /* Subtle gray for the input */
 }
 
 .submitBtn {
@@ -33,6 +29,7 @@ p {
   margin-top: 32px;
 }
 
+/* Media Queries for Tablet and Desktop */
 @media only screen and (min-width: 768px) {
   .container {
     max-width: 768px;
@@ -41,8 +38,5 @@ p {
 
   .fill {
     width: 360px;
-  }
-  h1 {
-    font-size: 48px;
   }
 }
